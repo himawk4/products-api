@@ -1,6 +1,8 @@
 package uk.ac.westminster.products_api;
 
 public class Customer {
+        private static int customerCount = 0;
+
         private Long id;
         private String name;
         private String email;
@@ -13,6 +15,11 @@ public class Customer {
             this.name = name;
             this.email = email;
             this.address = address;
+            customerCount++;
+        }
+
+        public static int getCustomerCount(){
+            return customerCount;
         }
 
         public Long getId() {

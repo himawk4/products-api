@@ -3,12 +3,14 @@
 ```mermaid
 classDiagram
 class Customer {
+    -int customerCount$
     -Long id
     -String name
     -String email
     -Address address
     +Customer()
     +Customer(Long id, String name, String email, Address address)
+    +getCustomerCount()$ int
     +getId() Long
     +getName() String
     +getEmail() String
